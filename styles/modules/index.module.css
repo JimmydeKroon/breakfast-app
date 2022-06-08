@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.container h1 {
+  padding: 2.4em 0 2em 4em;
+}
+
+.main {
+  width: 82%;
+  margin-left: 18%;
+}
+
+.welcomebanners {
+  display: flex;
+  flex-direction: row;
+}

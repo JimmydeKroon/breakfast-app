@@ -1,0 +1,39 @@
+.cartitem {
+  width: 35%;
+  height: 8em;
+  border-radius: 2em;
+  margin: 0 0 3em 7.5em;
+  -webkit-box-shadow: 7px 7px 15px -4px rgba(17, 17, 17, 0.5); 
+  box-shadow: 7px 7px 15px -4px rgba(17, 17, 17, 0.5);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cartitemwrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.imagewrapper {
+  padding: 0 2em 0 2em;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+}
+
+.information p {
+  font-size: 1.1em;
+  margin-top: .5em;
+}
+
+.removefromcart svg {
+  font-size: 2em;
+  color: #FF7878;
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+}

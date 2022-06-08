@@ -1,0 +1,40 @@
+.shopitem {
+  width: 60%;
+  height: 10em;
+  border-radius: 2em;
+  margin: 0 0 5em 7.5em;
+  -webkit-box-shadow: 7px 7px 15px -4px rgba(17, 17, 17, 0.5); 
+  box-shadow: 7px 7px 15px -4px rgba(17, 17, 17, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.imagewrapper {
+  padding: 0 3em 0 2em;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  max-width: 35%;
+}
+
+.description p {
+  color: #afb3bd;
+  padding-top: 1em;
+}
+
+.pricing {
+  margin-left: auto;
+  margin-right: 10%;
+}
+
+.addbutton {
+  border: none;
+  margin-top: 1em;
+  padding: .7em 2em;
+  background-color: #FF7878;
+  color: #fff;
+  border-radius: .5em;
+}
+

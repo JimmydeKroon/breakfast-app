@@ -1,0 +1,27 @@
+.container {
+  margin-left: 7.5em;
+}
+
+.shopcategorybutton {
+  margin: 0 2em 3em 0;
+  font-size: 1.2em;
+  border-style: none;
+  padding: .5em 2em;
+  border-radius: 1em;
+  transition: transform .2s ease;
+}
+
+.shopcategorybutton:hover {
+  background-color: #ffbebe;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.active {
+  background-color: #FF7878;
+}
+
+.active:hover {
+  background-color: #FF7878;
+  transform: scale(1);
+}

@@ -1,0 +1,23 @@
+.cartquantitycounter {
+  width: 5em;
+  height: 8em;
+  border-radius: 2em;
+  margin: 0 0 3em 1.5em;
+  -webkit-box-shadow: 7px 7px 15px -4px rgba(17, 17, 17, 0.5); 
+  box-shadow: 7px 7px 15px -4px rgba(17, 17, 17, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartquantitycounter svg {
+  font-size: 1.7em;
+  color: #E6B15D;
+}
+
+.cartquantitycounter p {
+  font-size: 1.3em;
+  margin: .5em 0;
+}
+

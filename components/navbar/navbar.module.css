@@ -1,0 +1,67 @@
+.navbarcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  min-height: 100vh;
+  justify-content: flex-start;
+  position: fixed;
+  background-color: #FAFAFA;
+  border-right: 2px solid #f4f4f4;
+}
+
+.navbarlist {
+  flex-direction: column;
+  list-style: none;
+  padding-top: 4em;
+}
+
+.navbarlist h4 {
+  font-size: 1.2em;
+  padding: 0 0 1em 2em;
+}
+
+.navbarcontainer ul li svg {
+  padding-right: 1em;
+  width: 1.3em;
+}
+
+.navbaritem {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 1.2em 0 1.2em 2em;
+  color: #afb3bd;
+  height: 2em;
+}
+
+.navbaritem:hover {
+  color: #E6B15D;
+}
+
+.navbaritem::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4.7em;
+  height: 2em;
+  left: -4.7em;
+  background-color: #E6B15D;
+  border-radius: 0.3em;
+  transition: .3s ease;
+}
+
+.navbaritem:hover::before {
+  width: 5em;
+}
+
+.cartcounter {
+  margin-left: .5em;
+  background-color: #E6B15D;
+  color: #262626;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 1em;
+  text-align: center;
+  padding: .1em 0;
+  font-size: 0.85em;
+}

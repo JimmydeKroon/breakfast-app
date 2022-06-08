@@ -1,0 +1,41 @@
+.welcomebanner {
+  width: 375px;
+  height: 200px;
+  position: relative;
+  margin: 0 0 0 7.7em;
+  font-size : clamp(0.6rem, 0.8vw, 1.5rem);
+  border-radius: 1.5em;
+  transition: transform 0.2s ease;
+}
+
+.welcomebanner:hover {
+  transform: scale(1.03);
+}
+
+.welcomebanner span {
+  border-radius: 1.5em;
+}
+
+.welcomebanner svg {
+  font-size: 1.5em;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+}
+
+.welcomebanner h2 {
+  position: absolute;
+  top: 5em;
+  left: 1.5em;
+  max-width: 7.5em;
+}
+
+.banner1 {
+  -webkit-box-shadow: 4px 6px 15px 2.5px rgba(209, 93, 116, 0.5); 
+  box-shadow: 4px 6px 15px 2.5px rgba(209, 93, 116, 0.5);
+}
+
+.banner2 {
+  -webkit-box-shadow: 4px 6px 15px 2.5px rgba(246, 224, 158, 0.5); 
+  box-shadow: 4px 6px 15px 2.5px rgba(246, 224, 158, 0.5);
+}
