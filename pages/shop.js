@@ -18,18 +18,29 @@ export default function Shop() {
   const cartContext = React.useContext(CartContext);
 
   function updateCart(addeditem) {
+    let duplicateproduct = false;
 
-    Object.keys(cartContext.itemsincart).forEach(function (item) {
-      console.log(cartContext.itemsincart[item]);
-    });
-    cartContext.setitemsincart(prevState => [...prevState, {addeditem}])
+    for (let i = 0; i < cartContext.itemsincart.length; i++) {
+      if(cartContext.itemsincart[i].addeditem.product === addeditem.product) {
+        duplicateproduct = true;
+        cartContext.itemsincart[i].addeditem.quantity = cartContext.itemsincart[i].addeditem.quantity + 1;
+        return
+      }
+      else {
+        duplicateproduct = false;
+      }
+    }
+
+    if (duplicateproduct === false) {
+      cartContext.setitemsincart(prevState => [...prevState, {addeditem}])
+    }
   }
 
   const initialRender = useRef(true);
 
   useEffect(() => {
     if (initialRender.current) {
-      initialRender.current = false;
+      initialRender.current = false; // prevents empty localstorage update on first page visit
     } else {
       localStorage.setItem(1, JSON.stringify(cartContext.itemsincart))
     }

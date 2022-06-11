@@ -27,7 +27,10 @@ export default function Cartitem(props) {
             <p>${props.info.addeditem.price}</p>
           </div>
 
-          <div className={styles.removefromcart}>
+          <div 
+            className={styles.removefromcart}
+            onClick={ () => props.remove(event)
+            }>
             <FontAwesomeIcon icon={faXmarkCircle} />
           </div>
       </div>

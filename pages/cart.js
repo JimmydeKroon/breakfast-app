@@ -10,6 +10,10 @@ import Cartitemcounter from "../components/cartitemcounter/cartitemcounter";
 export default function Cart () {
   const cartContext = React.useContext(CartContext);
 
+  function removeFromCart(passeditem) {
+    console.log(passeditem);
+  }
+
   return(
     <div className={styles.container}>
       <Head>
@@ -26,7 +30,12 @@ export default function Cart () {
         <h1>Cart</h1>
 
         <div className={styles.allcartitems}>
-          {cartContext.itemsincart.map((item, index) => <Cartitem info={item} key={index}></Cartitem>)}
+          {cartContext.itemsincart.map((item, index) => 
+          <Cartitem 
+            info={item} 
+            key={index}
+            remove={removeFromCart}>
+          </Cartitem>)}
         </div>
       </div>
     </div>
