@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navbar from '../components/navbar/navbar'
 import styles from '../styles/modules/cart.module.css'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import CartContext from '../contexts/CartContext'
 
 import Cartitem from "../components/cartitem/cartitem";
@@ -11,8 +11,18 @@ export default function Cart () {
   const cartContext = React.useContext(CartContext);
 
   function removeFromCart(passeditem) {
-    console.log(passeditem);
+    cartContext.setitemsincart(prevState => prevState.filter(index => index.addeditem.product !== passeditem))
   }
+
+  const initialRender = useRef(true);
+
+  useEffect(() => {
+    if (initialRender.current) {
+      initialRender.current = false; // prevents empty localstorage update on first page visit
+    } else {
+      localStorage.setItem(1, JSON.stringify(cartContext.itemsincart))
+    }
+  }, [cartContext]);
 
   return(
     <div className={styles.container}>

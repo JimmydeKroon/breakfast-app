@@ -1,6 +1,7 @@
 import styles from './navbar.module.css'
 import Profilebanner from '../profilebanner/profilebanner'
 import Link from 'next/link';
+import React, { useEffect, useRef } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse } from '@fortawesome/free-solid-svg-icons'
@@ -8,8 +9,20 @@ import { faShop } from '@fortawesome/free-solid-svg-icons'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 
-export default function navbar(props) {
+export default function Navbar(props) {
   let itemsInCart = props.itemsincart > 0
+
+  // const counterRef = useRef();
+  // // useEffect(() => {
+  // //     console.log(counterRef.current);
+  // // }, [counterRef]);
+
+
+
+  // useEffect(() => {
+  //   const counter = counterRef.current
+  //   counter.classList.add('addbounce');
+  // }, [props.itemsincart, counterRef])
 
   return (
         <div className={styles.navbarcontainer}>

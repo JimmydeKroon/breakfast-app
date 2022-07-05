@@ -7,6 +7,7 @@ import CartContext from '../contexts/CartContext'
 
 import Shopitem from '../components/shopitem/shopitem'
 import ShopCategoryFilter from '../components/shop-categoryfilter/shop-categoryfilter'
+import { counter } from '@fortawesome/fontawesome-svg-core'
 
 export default function Shop() {
   const [filter, setFilter] = useState('all');

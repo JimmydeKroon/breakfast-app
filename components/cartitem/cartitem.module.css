@@ -29,11 +29,21 @@
   margin-top: .5em;
 }
 
+.removefromcart {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.removefromcart:hover {
+  transform: scale(1.15);
+}
+
 .removefromcart svg {
   font-size: 2em;
   color: #FF7878;
-  position: absolute;
-  right: 1em;
-  top: 50%;
-  transform: translateY(-50%);
+  
+  
+  
 }

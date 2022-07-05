@@ -65,3 +65,13 @@
   padding: .1em 0;
   font-size: 0.85em;
 }
+
+.addbounce {
+  animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+  0%   {transform: scale(1);}
+  50%  {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
