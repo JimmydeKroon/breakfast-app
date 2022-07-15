@@ -14,6 +14,12 @@
 .cartquantitycounter svg {
   font-size: 1.7em;
   color: #E6B15D;
+  transition: transform 0.2s ease;
+}
+
+.cartquantitycounter svg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .cartquantitycounter p {

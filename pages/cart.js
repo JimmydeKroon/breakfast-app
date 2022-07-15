@@ -14,6 +14,21 @@ export default function Cart () {
     cartContext.setitemsincart(prevState => prevState.filter(index => index.addeditem.product !== passeditem))
   }
 
+  function updateQuantity(clickeditem, action){
+    for (let i = 0; i < cartContext.itemsincart.length; i++) {
+      if(cartContext.itemsincart[i].addeditem.product === clickeditem && action === "plus") {
+        cartContext.itemsincart[i].addeditem.quantity = cartContext.itemsincart[i].addeditem.quantity + 1;
+      }
+      if(cartContext.itemsincart[i].addeditem.product === clickeditem && action === "minus") {
+        if(cartContext.itemsincart[i].addeditem.quantity > 1) {
+          cartContext.itemsincart[i].addeditem.quantity = cartContext.itemsincart[i].addeditem.quantity - 1;
+        }
+      }
+
+      cartContext.setitemsincart(prevState => [...prevState]);
+    }
+  }
+
   const initialRender = useRef(true);
 
   useEffect(() => {
@@ -43,8 +58,10 @@ export default function Cart () {
           {cartContext.itemsincart.map((item, index) => 
           <Cartitem 
             info={item} 
+            quantity={item.addeditem.quantity}
             key={index}
-            remove={removeFromCart}>
+            remove={removeFromCart}
+            updatequantity={updateQuantity}>
           </Cartitem>)}
         </div>
       </div>

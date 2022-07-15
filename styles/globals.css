@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  user-select: none; /* removes the ability to select things on the page, helps with the quantity selector on the cart page */
 }
 
 body {

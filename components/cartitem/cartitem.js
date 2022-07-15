@@ -7,7 +7,7 @@ import { faXmarkCircle } from '@fortawesome/free-solid-svg-icons'
 import Cartitemcounter from '../cartitemcounter/cartitemcounter'
 
 export default function Cartitem(props) {
-
+  
   return(
     <div className={styles.cartitemwrapper}>
       <div className={styles.cartitem}>
@@ -28,14 +28,16 @@ export default function Cartitem(props) {
           </div>
 
           <div className={styles.removefromcart}
-            onClick={ () => props.remove(props.info.addeditem.product)
-            }>
+            onClick={ () => props.remove(props.info.addeditem.product)}>
             <FontAwesomeIcon icon={faXmarkCircle} />
           </div>
       </div>
 
       <Cartitemcounter
-        quantity={props.info.addeditem.quantity}>
+        quantity={props.info.addeditem.quantity}
+        product={props.info.addeditem.product}
+        updatequantity={props.updatequantity}
+        key={props.quantity}>
       </Cartitemcounter>
     </div>
   )
